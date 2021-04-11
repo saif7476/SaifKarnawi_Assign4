@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WindowController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="162.0" layoutY="41.0" text="Airline Information System" textFill="#ed0808">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="84.0" text="Choose Search Option" />
+            <RadioButton fx:id="rbAirline" layoutX="156.0" layoutY="84.0" mnemonicParsing="false" onAction="#AirlineRadioBtnClick" text="Airline">
+               <toggleGroup>
+                  <ToggleGroup fx:id="radioChoice" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="rbAirlineNumber" layoutX="226.0" layoutY="84.0" mnemonicParsing="false" onAction="#AirlineNumberRadioBtnClick" text="Airline Number" toggleGroup="$radioChoice" />
+            <RadioButton fx:id="rbDepartureAirport" layoutX="341.0" layoutY="84.0" mnemonicParsing="false" onAction="#DepartureAirportRadioBtnClick" text="Departure Airport" toggleGroup="$radioChoice" />
+            <RadioButton fx:id="rbArrivalAirport" layoutX="467.0" layoutY="84.0" mnemonicParsing="false" onAction="#ArrivalAirpotRadioBtnClick" text="Arrival Airport" toggleGroup="$radioChoice" />
+            <Label layoutX="24.0" layoutY="135.0" text="Airline" />
+            <Label layoutX="24.0" layoutY="177.0" text="Airline Number" />
+            <Label layoutX="24.0" layoutY="217.0" text="Departure Number" />
+            <Label layoutX="24.0" layoutY="253.0" text="Arrival Airport" />
+            <ChoiceBox fx:id="choiceAirline" layoutX="143.0" layoutY="131.0" prefHeight="26.0" prefWidth="163.0" />
+            <ChoiceBox fx:id="choiceAirlineNumber" layoutX="143.0" layoutY="173.0" prefHeight="26.0" prefWidth="162.0" />
+            <ChoiceBox fx:id="choiceDepartureNumber" layoutX="145.0" layoutY="213.0" prefHeight="26.0" prefWidth="160.0" />
+            <ChoiceBox fx:id="choiceArrivalAirport" layoutX="145.0" layoutY="249.0" prefHeight="26.0" prefWidth="159.0" />
+            <Button fx:id="btnSearch" layoutX="59.0" layoutY="308.0" mnemonicParsing="false" onAction="#OnSearch" text="Search" />
+            <Button fx:id="btnClose" layoutX="162.0" layoutY="308.0" mnemonicParsing="false" onAction="#OnClose" text="Close" />
+            <ListView fx:id="MyListView" layoutX="330.0" layoutY="126.0" prefHeight="214.0" prefWidth="337.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
